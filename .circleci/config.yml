@@ -5,9 +5,9 @@ orbs:
 
 jobs:
   run_tests:
-    working_directory: ~/react-app
+    working_directory: ~/brain-hike
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:14.7.0
     steps:
       - checkout
       - run:
@@ -32,7 +32,7 @@ workflows:
     jobs:
       - run_tests
       - docker/publish:
-          image: gumshoe/$CIRCLE_PROJECT_REPONAME
+          image: unfaiyted/$CIRCLE_PROJECT_REPONAME
           dockerfile: dockerfile
           requires:
             - run_tests
