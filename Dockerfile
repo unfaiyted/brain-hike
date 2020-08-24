@@ -1,6 +1,6 @@
 FROM node:14.7.0-alpine as build
 
-WORKDIR /app
+WORKDIR /brain-hike
 
 COPY package*.json /app/
 
