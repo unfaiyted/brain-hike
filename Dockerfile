@@ -1,20 +1,19 @@
 FROM node:14.7.0-alpine as build
 
-WORKDIR /brain-hike
 
-COPY package*.json /app/
+# set working directory
+WORKDIR /app
 
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
 RUN npm install
 
-COPY ./ /brain-hike/
+# add app
+COPY . ./
 
-RUN npm run build
-
-FROM nginx:1.15.8-alpine
-
-COPY --from=build /brain-hike/build /usr/share/nginx/html
-COPY --from=build /brain-hike/nginx/nginx.conf /etc/nginx/nginx.conf
-
-EXPOSE 80
-
-ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+# start app
+CMD ["npm", "start"]
