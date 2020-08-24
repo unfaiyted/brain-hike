@@ -33,7 +33,7 @@ workflows:
       - run_tests
       - docker/publish:
           image: unfaiyted/$CIRCLE_PROJECT_REPONAME
-          dockerfile: dockerfile
+          dockerfile: Dockerfile
           requires:
             - run_tests
           filters:
