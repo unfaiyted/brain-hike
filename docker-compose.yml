@@ -8,47 +8,25 @@ services:
     image: unfaiyted/brain-hike
     container_name: brain-hike
     restart: unless-stopped
-    networks:
-      - app-network
-
-  webserver:
-    image: nginx:latest
-    container_name: webserver
+    depends_on:
+      - brain-hike-swag
+  brain-hike-swag:
+    image: linuxserver/swag
+    container_name:  brain-hike-swag
     restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
     ports:
-      - "80:80"
-      - "443:443"
+      - 80:80
+      - 443:443
     volumes:
-      - web-root:/var/www/html
-      - ./data/nginx:/etc/nginx/conf.d
-      - certbot-etc:/etc/letsencrypt
-      - certbot-var:/var/lib/letsencrypt
-    depends_on:
-      - brain-hike
-    networks:
-      - app-network
-
-  certbot:
-    image: certbot/certbot
-    container_name: certbot
-    volumes:
-      - certbot-etc:/etc/letsencrypt
-      - certbot-var:/var/lib/letsencrypt
-      - web-root:/var/www/html
-    depends_on:
-      - webserver
-    command: certonly --webroot --webroot-path=/var/www/html --email miller.l.dane@gmail.com --agree-tos --no-eff-email --staging -d faiyt.dev  -d www.faiyt.dev
-
-volumes:
-  certbot-etc:
-  certbot-var:
-  web-root:
-    driver: local
-    driver_opts:
-      type: none
-      device: /home/faiyt/node_project/views
-      o: bind
-
-networks:
-  app-network:
-    driver: bridge
+      - ./nginx/config/:/config
+      - ./build/:/build
+    environment:
+      - EMAIL=miller.l.dane@gmail.com
+      - URL=faiyt.dev
+      - SUBDOMAINS=www,api
+      - VALIDATION=http
+      - TZ=Europe/London
+      - PUID=0
+      - PGID=0

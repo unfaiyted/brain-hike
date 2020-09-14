@@ -27,3 +27,5 @@ yarn-error.log*
 *.iml
 /.idea/*.iml
 /.idea/**
+/nginx/**
+/nginx/
