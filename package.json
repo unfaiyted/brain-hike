@@ -17,7 +17,8 @@
     "eject": "react-scripts eject",
     "docker:build": "docker build -t unfaiyted/brain-hike .",
     "docker:run": "docker run --name brain-hike -p 3000:3000 -it --rm -v /app/node_modules -e CHOKIDAR_USEPOLLING=true unfaiyted/brain-hike",
-    "docker:both": "npm run docker:build && npm run docker:run"
+    "docker:both": "npm run docker:build && npm run docker:run",
+    "docker:push": ""
   },
   "eslintConfig": {
     "extends": "react-app"

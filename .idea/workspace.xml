@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1164d346-ba4a-46b3-8466-f4c70092209d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile.prod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile.prod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile.prod">
+  <component name="RunManager" selected="Docker.Dockerfile">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -55,8 +67,8 @@
           <option name="portBindings">
             <list>
               <DockerPortBindingImpl>
-                <option name="containerPort" value="3000" />
-                <option name="hostPort" value="3000" />
+                <option name="containerPort" value="80" />
+                <option name="hostPort" value="80" />
               </DockerPortBindingImpl>
             </list>
           </option>
@@ -163,7 +175,7 @@
       <workItem from="1598374693357" duration="1584000" />
       <workItem from="1598376306714" duration="14164000" />
       <workItem from="1598582400207" duration="26000" />
-      <workItem from="1600096986203" duration="1987000" />
+      <workItem from="1600096986203" duration="2447000" />
     </task>
     <servers />
   </component>
@@ -180,10 +192,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="751" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600101691193">
+    <state x="751" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600102502165">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="751" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400/2666.-1080.1097.577@0.0.3440.1400" timestamp="1600101691193" />
+    <state x="751" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400/2666.-1080.1097.577@0.0.3440.1400" timestamp="1600102502165" />
     <state x="814" y="524" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600101460955">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -192,10 +204,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1077" y="311" key="FileChooserDialogImpl/0.0.3440.1400/2666.-1080.1097.577@0.0.3440.1400" timestamp="1600101604723" />
-    <state x="1196" y="483" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1600101685346">
+    <state x="1196" y="483" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1600102499721">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1196" y="483" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/0.0.3440.1400/2666.-1080.1097.577@0.0.3440.1400" timestamp="1600101685346" />
+    <state x="1196" y="483" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/0.0.3440.1400/2666.-1080.1097.577@0.0.3440.1400" timestamp="1600102499721" />
   </component>
   <component name="masterDetails">
     <states>
