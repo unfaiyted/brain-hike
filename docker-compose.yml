@@ -7,6 +7,8 @@ services:
       dockerfile: Dockerfile
     image: unfaiyted/brain-hike
     container_name: brain-hike
+    ports:
+      - 9000:9000
     restart: unless-stopped
     depends_on:
       - brain-hike-swag
@@ -21,7 +23,6 @@ services:
       - 443:443
     volumes:
       - ./nginx/config/:/config
-      - ./build/:/build
     environment:
       - EMAIL=miller.l.dane@gmail.com
       - URL=faiyt.dev
