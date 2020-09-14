@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  brain-hike:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: unfaiyted/brain-hike
+    container_name: brain-hike
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  webserver:
+    image: nginx:latest
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - web-root:/var/www/html
+      - ./data/nginx:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+    depends_on:
+      - brain-hike
+    networks:
+      - app-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/html
+    depends_on:
+      - webserver
+    command: certonly --webroot --webroot-path=/var/www/html --email miller.l.dane@gmail.com --agree-tos --no-eff-email --staging -d faiyt.dev  -d www.faiyt.dev
+
+volumes:
+  certbot-etc:
+  certbot-var:
+  web-root:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/faiyt/node_project/views
+      o: bind
+
+networks:
+  app-network:
+    driver: bridge

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1164d346-ba4a-46b3-8466-f4c70092209d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile.prod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +40,16 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Docker.docker-compose.yml.webserver: Compose Deployment">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,21 +101,32 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.webserver: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="webserver" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker:both" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="docker:both" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="docker:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="docker:build" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -146,15 +158,17 @@
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="npm.docker:run" />
-      <item itemvalue="npm.docker:build" />
       <item itemvalue="npm.docker:both" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.webserver: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.webserver: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="npm.docker:both" />
         <item itemvalue="npm.docker:run" />
-        <item itemvalue="npm.docker:build" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +189,8 @@
       <workItem from="1598374693357" duration="1584000" />
       <workItem from="1598376306714" duration="14164000" />
       <workItem from="1598582400207" duration="26000" />
-      <workItem from="1600096986203" duration="2447000" />
+      <workItem from="1600096986203" duration="3870000" />
+      <workItem from="1600111455016" duration="2774000" />
     </task>
     <servers />
   </component>
@@ -192,10 +207,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="751" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600102502165">
+    <state x="751" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600107552152">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="751" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400/2666.-1080.1097.577@0.0.3440.1400" timestamp="1600102502165" />
+    <state x="751" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400/2666.-1080.1097.577@0.0.3440.1400" timestamp="1600107552152" />
     <state x="814" y="524" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600101460955">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
