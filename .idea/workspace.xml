@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1164d346-ba4a-46b3-8466-f4c70092209d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,15 +39,13 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Docker.Dockerfile">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -193,7 +189,9 @@
       <workItem from="1598376306714" duration="14164000" />
       <workItem from="1598582400207" duration="26000" />
       <workItem from="1600096986203" duration="3870000" />
-      <workItem from="1600111455016" duration="10540000" />
+      <workItem from="1600111455016" duration="16479000" />
+      <workItem from="1600264387396" duration="848000" />
+      <workItem from="1600434835079" duration="1900000" />
     </task>
     <servers />
   </component>
@@ -210,11 +208,12 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="751" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600121494166">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="1118" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600435575349">
+      <screen x="0" y="0" width="5120" height="1400" />
     </state>
-    <state x="751" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400/2219.-1080.1280.680@0.0.3440.1400" timestamp="1600121494166" />
+    <state x="751" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400/2219.-1080.1280.680@0.0.3440.1400" timestamp="1600122818596" />
     <state x="751" y="213" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400/2666.-1080.1097.577@0.0.3440.1400" timestamp="1600107552152" />
+    <state x="1118" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/3183.-1080.1280.693/0.0.5120.1400@0.0.5120.1400" timestamp="1600435575349" />
     <state x="814" y="524" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600101460955">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -228,10 +227,15 @@
     </state>
     <state x="1196" y="483" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/0.0.3440.1400/2219.-1080.1280.680@0.0.3440.1400" timestamp="1600121491862" />
     <state x="1196" y="483" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/0.0.3440.1400/2666.-1080.1097.577@0.0.3440.1400" timestamp="1600102499721" />
-    <state x="2846" y="334" key="run.anything.popup" timestamp="1600115067611">
+    <state x="397" y="389" key="new project wizard" timestamp="1600178572913">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
+    <state x="397" y="389" key="new project wizard/0.0.3440.1400/2219.-1080.1280.680@0.0.3440.1400" timestamp="1600178572913" />
+    <state x="4236" y="334" key="run.anything.popup" timestamp="1600434837816">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
     <state x="2846" y="334" key="run.anything.popup/0.0.3440.1400/2219.-1080.1280.680@0.0.3440.1400" timestamp="1600115067611" />
+    <state x="4236" y="334" key="run.anything.popup/3183.-1080.1280.693/0.0.5120.1400@0.0.5120.1400" timestamp="1600434837816" />
     <state x="793" y="626" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600121596845">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
